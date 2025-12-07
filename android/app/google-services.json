@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "488127638849",
+    "firebase_url": "https://ludon-28493-default-rtdb.firebaseio.com",
+    "project_id": "ludon-28493",
+    "storage_bucket": "ludon-28493.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488127638849:android:797c9c807301b412bb05c0",
+        "android_client_info": {
+          "package_name": "com.example.kingdom_of_light_church"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488127638849-uedt454smbij787rpg2mf773muvfn76f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXUlSi-ERIUjaeIIJz5elqSNj1fT05h5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488127638849-uedt454smbij787rpg2mf773muvfn76f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "488127638849-mh9dif8o2ntkc0ohh6hckej78j79s086.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ludon"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:488127638849:android:28c4cd5040ae4c94bb05c0",
+        "android_client_info": {
+          "package_name": "com.example.ludo_game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "488127638849-bvh2mn6nbj30hcv4vb8ga0hnee62u6v7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ludo_game",
+            "certificate_hash": "2452b73eb418028c4a974ec90cb1cba3639d000a"
+          }
+        },
+        {
+          "client_id": "488127638849-iscommko1k7gv34ldr98f82egg3rb992.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ludo_game",
+            "certificate_hash": "10b2431864e78e3670ed256e6bf880976a7d5050"
+          }
+        },
+        {
+          "client_id": "488127638849-uedt454smbij787rpg2mf773muvfn76f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXUlSi-ERIUjaeIIJz5elqSNj1fT05h5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "488127638849-uedt454smbij787rpg2mf773muvfn76f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "488127638849-mh9dif8o2ntkc0ohh6hckej78j79s086.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.ludon"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
