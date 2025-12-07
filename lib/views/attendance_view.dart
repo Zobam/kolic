@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
-import '../viewmodels/attendance_viewmodel.dart';
 import '../models/member.dart';
-import 'add_member_view.dart';
+import '../viewmodels/attendance_viewmodel.dart';
 
-class MembersListView extends StatelessWidget {
-  const MembersListView({super.key});
+class AttendanceView extends StatelessWidget {
+  const AttendanceView({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // We can reuse AttendanceViewModel since it holds the date and logic
     final viewModel = context.watch<AttendanceViewModel>();
 
     return Scaffold(
@@ -57,8 +57,6 @@ class MembersListView extends StatelessWidget {
           return StreamBuilder<List<String>>(
             stream: viewModel.presentMembersStream,
             builder: (context, presentSnapshot) {
-              // If loading present status, we can still show members but maybe disable buttons?
-              // Or just wait. Let's just show.
               final presentIds = presentSnapshot.data ?? [];
 
               return ListView.builder(
@@ -69,7 +67,7 @@ class MembersListView extends StatelessWidget {
 
                   return ListTile(
                     title: Text('${member.firstName} ${member.lastName}'),
-                    subtitle: Text(member.phoneNumber),
+                    // No onTap details dialog here, strictly attendance
                     trailing: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor:
@@ -88,15 +86,6 @@ class MembersListView extends StatelessWidget {
             },
           );
         },
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (_) => const AddMemberView()),
-          );
-        },
-        child: const Icon(Icons.add),
       ),
     );
   }

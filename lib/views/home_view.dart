@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'members_list_view.dart';
+import 'members_view.dart';
+import 'attendance_view.dart';
 import 'reading_plan_calendar_view.dart';
 import 'quiz_setup_view.dart';
 
@@ -14,7 +15,8 @@ class _HomeViewState extends State<HomeView> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    const MembersListView(),
+    const MembersView(),
+    const AttendanceView(),
     const ReadingPlanCalendarView(),
     const QuizSetupView(),
   ];
@@ -25,6 +27,7 @@ class _HomeViewState extends State<HomeView> {
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
+        type: BottomNavigationBarType.fixed, // Needed for 4+ items
         onTap: (index) {
           setState(() {
             _currentIndex = index;
@@ -32,7 +35,11 @@ class _HomeViewState extends State<HomeView> {
         },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.people),
+            icon: Icon(Icons.people_outline), // Distinct icon
+            label: 'Members',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.calendar_today), // Distinct icon
             label: 'Attendance',
           ),
           BottomNavigationBarItem(

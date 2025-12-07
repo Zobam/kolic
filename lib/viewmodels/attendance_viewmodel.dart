@@ -39,6 +39,11 @@ class AttendanceViewModel extends ChangeNotifier {
     await _firestoreService.addMember(newMember);
   }
 
+  Future<void> updateMember(Member member) async {
+    await _firestoreService.updateMember(member);
+    notifyListeners();
+  }
+
   Future<void> toggleAttendance(String memberId, bool isPresent) async {
     await _firestoreService.markAttendance(_selectedDate, memberId, isPresent);
   }

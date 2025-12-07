@@ -13,6 +13,11 @@ class FirestoreService {
     await _membersCollection.add(member.toMap());
   }
 
+  // Update Member
+  Future<void> updateMember(Member member) async {
+    await _membersCollection.doc(member.id).update(member.toMap());
+  }
+
   // Get Members Stream
   Stream<List<Member>> getMembers() {
     return _membersCollection.snapshots().map((snapshot) {
